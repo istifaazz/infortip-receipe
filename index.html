@@ -42,9 +42,42 @@ nav {
     line-height: 80px;
     position: sticky;
     top: 0;
-    background: white;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7); /* pink lembut */
     z-index: 1;
     border-bottom:1px solid #123458;
+}
+
+nav.scrolled {
+    background: linear-gradient(to right, #ffdde1, #ee9ca7); /* pink lembut */;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+nav .logo {
+    font-size: 2rem;
+    color: #ee9ca7;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    margin-right: auto;
+    transition: color 0.4s ease;
+}
+
+nav.scrolled .logo {
+    color: #ee9ca7;
+}
+
+/* Logo */
+nav .logo {
+    font-size: 2rem;
+    color: #ee9ca7;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    margin-right: auto;
+    transition: color 0.4s ease;
+}
+
+nav.scrolled .logo {
+    color: #ee9ca7;
 }
 
 nav ul {
@@ -68,6 +101,7 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+    background-color: rgba(255,255,255,0.3);
 }
 
 section {
@@ -204,73 +238,57 @@ p {
   text-align: left;
 }
 
-#komentar input,
-#komentar textarea {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
-
-#daftarKomentar div {
-  border: 1px solid #ccc;
-  background-color: #fdfdfd;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-/* === Komentar Section Styling === */
 #komentar {
-  padding: 50px 20px;
-  background-color: #fff;
+    background-color: #fff0f5; /* pink muda */
+    padding: 50px 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
-.komentar-container {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
+#komentar h2 {
+    color: #4b0082;
+    margin-bottom: 10px;
 }
 
-#formKomentar {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+#komentar h3 {
+    color: #000;
+    margin-bottom: 30px;
 }
 
-#formKomentar input,
-#formKomentar textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  box-sizing: border-box;
+#komentar input[type="text"],
+#komentar textarea {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
-#formKomentar button {
-  background-color: pink;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
+#komentar input[type="text"]:focus,
+#komentar textarea:focus {
+    border-color: #ff69b4;
+    outline: none;
 }
 
-#formKomentar button:hover {
-  background-color: #f067a0;
+#komentar button {
+    background-color: #ffb6c1;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#daftarKomentar {
-  margin-top: 30px;
-  text-align: left;
-}
-
-#daftarKomentar div {
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
+#komentar button:hover {
+    background-color: #ff69b4;
 }
 
 #tips {
@@ -439,40 +457,58 @@ p {
   height: auto;
 }
 
-.kontak-section {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
+#kontak {
+    background-color: #f0f8ff; /* Warna latar biru muda */
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.kontak-container {
-  max-width: 600px;
-  margin: 0 auto;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
+#kontak h2 {
+    color: #1f4e79;
+    margin-bottom: 10px;
 }
 
-.kontak-container h2 {
-  color: #1e3a5f;
-  font-size: 28px;
-  margin-bottom: 10px;
+#kontak h3 {
+    color: #000;
+    margin-bottom: 20px;
 }
 
-.kontak-container h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-weight: bold;
+#kontak p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
-.kontak-container p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 10px;
+#footer {
+    background: linear-gradient(to right, #ffdde1, #ee9ca7); /* pink lembut */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+    margin-top: 50px;
+    border-top: 1px solid #ddd;
+}
+
+#footer p {
+    margin: 0;
+}
+
+#footer strong {
+    color: #000;
+}
+
+#footer span {
+    color: #666;
 }
 
     </style>
 </head>
 <body>
+
     <nav>
         <div class="wrapper">
             <div class="logo"><a href="">Infortip</a></div>
@@ -487,9 +523,11 @@ p {
                     <li><a href="#kontak">Kontak</a> </li>
                     <li><a href="#komentar">Komentar</a></li>
                 </ul>
+                </div>
             </div>
         </div>
     </nav>
+
     <div class="wrapper">
         <!-- untuk home -->
         <section id="home" class="home-section">
@@ -585,6 +623,7 @@ p {
   </div>
 </section>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xVMJH5wAMqg?si=5MShwQRbuSf5OmPH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
            <!-- untuk menu-->
            <section id="menu">
             <div class="kolom">
@@ -664,11 +703,10 @@ p {
 </section>
     </div>
 
-    <div id="copyright">
-        <div class="wrapper">
-            &copy; 2025. <b>Istifa Zahra. Infortip</b> -Sistem Informasi-
-        </div>
-    </div>
+<footer id="footer">
+    <p>&copy; 2025. <strong>Istifa Zahra</strong> - <span>Infortip | Sistem Informasi</span></p>
+</footer>
+
 
     <script>
   const menuItems = [
@@ -760,6 +798,12 @@ p {
   });
 </script>
 
+<script>
+  window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
 
 </body>
 </html>
